@@ -1,0 +1,51 @@
+/* Umumiy Stil */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+.section-image{
+  background-image: url('Xiva.png');
+  background-size: cover;
+}
+
+h1, h2, h3 {
+  color: #343a40;
+}
+
+.navbar {
+  background-color: #212529;
+}
+header {
+  background-image: url('xiva.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar-brand {
+  color: #fff;
+  display: flex;
+  margin-left: 2%;
+}    
+
+.navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #adb5bd;
+}
+
+footer {
+  background-color: #212529;
+  color: #fff;
+  padding: 1rem;
+}
+
+/* Xususiyatlar va yangiliklar bo‘limi */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}

@@ -1,0 +1,271 @@
+/* Umumiy Stil */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+.section-image{
+  background-image: url('Xiva.png');
+  background-size: cover;
+}
+
+h1, h2, h3 {
+  color: #343a40;
+}
+
+.navbar {
+  background-color: #212529;
+}
+header {
+  background-image: url('xiva.jpg');
+  background-repeat: no-repeat;     
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.navbar-brand {
+  color: #fff;
+  display: flex;
+  margin-left: 2%;
+}    
+
+.navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #adb5bd;
+}
+
+footer {
+  background-color: #212529;
+  color: #fff;
+  padding: 1rem;
+}
+
+/* Xususiyatlar va yangiliklar bo‘limi */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+.card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: none;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Rasmga qora filter va yozuvli qatlam */
+.card-img-top {
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.card:hover .card-img-top {
+  filter: brightness(80%);
+}
+
+/* Card body ichidagi text hoverda ustiga chiqib chiqsin */
+.card-body {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover .card-body {
+  background-color: #f8f9fa;
+}
+
+/* Yozuvlar hoverda biroz o‘zgaradi */
+.card-title, .card-text {
+  transition: color 0.3s ease;
+}
+
+.card:hover .card-title {
+  color: #007bff;
+}
+
+.card:hover .card-text {
+  color: #343a40;
+}
+
+/* Maxsus pseudo-element: dekorativ element ustida paydo bo‘ladi */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0,123,255,0.2), rgba(0,0,0,0.1));
+  z-index: 0;
+  transition: top 0.5s ease;
+  border-radius: 15px;
+}
+
+.card:hover::before {
+  top: 0;
+}
+.testimonial-card {
+  background-color: #ffffff;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-card img {
+  border: 3px solid #007bff;
+  transition: transform 0.4s ease;
+}
+
+.testimonial-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Matn uslublari */
+.testimonial-card p {
+  font-size: 16px;
+  color: #555;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.testimonial-card:hover p {
+  color: #333;
+}
+
+/* Ism */
+.testimonial-card strong {
+  font-size: 18px;
+  color: #007bff;
+  font-weight: 600;
+  display: block;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* Dekorativ gradient chiziq */
+.testimonial-card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  width: 40%;
+  height: 4px;
+  background: linear-gradient(to right, #007bff, #00c9ff);
+  border-radius: 5px;
+}
+.news-card {
+  background: linear-gradient(135deg, #f0f8ff, #e6f0ff);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 123, 255, 0.2);
+}
+
+.news-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.news-card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.news-card .card-body {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.news-card .card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 15px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.news-card .card-title::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background-color: #007bff;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+.news-card:hover .card-title {
+  color: #0056b3;
+}
+
+.news-card:hover .card-title::after {
+  width: 60px;
+}
+
+.news-card .card-text {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.news-card:hover .card-text {
+  color: #333;
+}
+
+.news-card .btn {
+  align-self: center;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: #007bff;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.news-card .btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+.footer-icons{
+  /* border: 1px solid white ; */
+  margin: 10px auto;
+  width: 15%;
+  display: flex;
+  justify-content: space-around;
+}
+
