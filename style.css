@@ -1,14 +1,23 @@
 /* Umumiy Stil */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
 }
 
+.custom-navbar {
+  background: linear-gradient(45deg, #00c6ff, #0072ff); /* Gradient ko‘k ohang */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.custom-navbar .nav-link:hover {
+  color: #ffe600 !important; /* Sariq rangda hover efekti */
+}
 
 .section-image{
   background-image: url('Xiva.png');
   background-size: cover;
+  
 }
 
 h1, h2, h3 {
@@ -23,6 +32,7 @@ header {
   background-repeat: no-repeat;     
   background-size: cover;
   background-attachment: fixed;
+  background-position: center bottom;
 }
 
 .navbar-brand {

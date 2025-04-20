@@ -2,114 +2,135 @@
 <html lang="uz">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xiva haqida</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>O‘zbek Madaniyat Festivallari</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
-      height: 100%;
+    body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
     }
 
     .hero {
+      background-image: url('img/navruz2.jpg');
       background-size: cover;
-      background-position: center;
-      height: 100vh;
+      background-position: center 10px;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      height: 60vh;
       color: white;
       display: flex;
-      flex-direction: column;
+      align-items: end;
       justify-content: center;
-      align-items: center;
       text-align: center;
       position: relative;
     }
 
-    .overlay {
+    .hero::before {
+      content: "";
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-    
-      z-index: 1;
+      background: rgba(0, 0, 0, 0.5);
     }
 
-    .content {
+    .hero h1 {
+      position: relative;
       z-index: 2;
-      max-width: 700px;
-      padding: 20px;
+      font-size: 3rem;
     }
 
-    .content h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
+    .festival-card img {
+      height: 200px;
+      object-fit: cover;
     }
 
-    .content p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 30px;
-      color: #000;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .content img {
-      width: 500px;
-      height: 300px;
-      border-radius: 20px;
-    }
-
-    .buttons a {
-      padding: 12px 25px;
-      background-color: #ffcc00;
+    .footer {
+      background-color: #343a40;
       color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
-
-    .buttons a:hover {
-      background-color: #fff;
-      color: #000;
-      transform: scale(1.1);
-      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.4);
-    }
-
-    @media (max-width: 600px) {
-      .content h1 {
-        font-size: 32px;
-      }
-      .content p {
-        font-size: 16px;
-      }
+      padding: 20px 0;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
-  <div class="hero">
-    <div class="overlay"></div>
-    <div class="content">
-      <img src="Xiva.png" alt=""  onclick="window.location.href='https://uzbekistan360.uz/ru/location/khivaRZL'">
-      <h1 style="color: #000;">XIVA</h1>
-      <p>
-        Xiva — qadimiy shahar bo‘lib, O‘zbekistonning eng tarixiy va madaniy markazlaridan biridir. 
-        Bu yerda ko‘plab me'moriy obidalar, madrasa va masjidlar mavjud bo‘lib, ularning aksariyati YuNESKO merosi ro‘yxatiga kiritilgan.
-      </p>
-      <div class="buttons">
-        <a href="xiva.html">Sayohatga chiqish</a>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>O‘zbek Madaniyat Festivallari</h1>
+  </section>
+
+  <!-- Festival Cards -->
+  <div class="container my-5">
+    <div class="row g-4">
+
+      <!-- Navro'z -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card festival-card h-100">
+          <img src="img/navruz.webp" class="card-img-top" alt="Navro'z">
+          <div class="card-body">
+            <h5 class="card-title">Navro‘z Festivali</h5>
+            <p class="card-text">Har yili 21 mart kuni o'tkaziladi. Bahor va yangi hayot ramzi bo‘lgan Navro‘z o‘zbek xalqining eng qadimiy bayramlaridan biridir.</p>
+            <button class="btn btn-outline-primary" onclick="learnMore('Navro‘z - qadimiy xalq bayrami boʻlib, yangi yil va bahorning kirib kelishini nishonlaydi. Bu kunda milliy taomlar tayyorlanadi, musobaqalar boʻlib oʻtadi.')">Batafsil</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sharq Taronalari -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card festival-card h-100">
+          <img src="img/sharq taronalari.jpg" class="card-img-top" alt="Sharq Taronalari">
+          <div class="card-body">
+            <h5 class="card-title">Sharq Taronalari</h5>
+            <p class="card-text">Samarqandda har ikki yilda bir marta bo‘lib o‘tadigan xalqaro musiqa festivali. Sharqona ohanglar uyg‘unligi namoyish etiladi.</p>
+            <button class="btn btn-outline-primary" onclick="learnMore('Sharq Taronalari — xalqaro musiqa festivali bo‘lib, turli mamlakatlardan san’atkorlar ishtirok etadi.')">Batafsil</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Asrlar Sadosi -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card festival-card h-100">
+          <img src="img/asrlar sadosi.jpg" class="card-img-top" alt="Asrlar Sadosi">
+          <div class="card-body">
+            <h5 class="card-title">Asrlar Sadosi</h5>
+            <p class="card-text">Tarixiy va milliy hunarmandchilikni namoyish etuvchi festival. Ko‘chma konsertlar, ko‘rgazmalar va teatr sahnalari mavjud.</p>
+            <button class="btn btn-outline-primary" onclick="learnMore('Asrlar Sadosi – o‘zbek tarixiy san’ati va milliy hunarmandchiligi uyg‘unligidagi festivaldir.')">Batafsil</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoModalLabel">Festival Tafsilotlari</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Yopish"></button>
+        </div>
+        <div class="modal-body" id="modalContent">
+          <!-- JavaScript orqali to‘ldiriladi -->
+        </div>
       </div>
     </div>
   </div>
 
+  <!-- Footer -->
+  <div class="footer">
+    &copy; 2025 O‘zbekiston Madaniyati. Barcha huquqlar himoyalangan.
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function learnMore(info) {
+      document.getElementById('modalContent').textContent = info;
+      var modal = new bootstrap.Modal(document.getElementById('infoModal'));
+      modal.show();
+    }
+  </script>
 </body>
 </html>

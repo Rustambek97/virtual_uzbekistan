@@ -9,14 +9,17 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="icon" type="image/png" href="../rasmlar/vr_O_zbekiston-removebg-preview.png" sizes="64x64">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg custom-navbar">
     <div class="container-fluid">
       <img src="Flag_of_Uzbekistan.svg.png" alt="" style="width: 10%; object-fit: contain; border-radius: 5px;">
-      <a class="navbar-brand" href="#">Virtual O‘zbekiston</a>
+      <a class="navbar-brand text-white" href="#">Virtual O‘zbekiston</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -24,23 +27,24 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="kirish.html">Kirish</a>
+            <a class="nav-link active text-white" aria-current="page" href="kirish.html">Kirish</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="royxat.html">Royxatdan o'tish</a>
+            <a class="nav-link text-white" href="royxat.html">Royxatdan o'tish</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link text-white" href="about.html">About</a>
           </li>
         </ul>
         <!-- Navbar Search Form -->
         <form class="d-flex ms-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Izlash..." aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Izlash</button>
+          <button class="btn btn-light" type="submit">Izlash</button>
         </form>
       </div>
     </div>
   </nav>
+
 
   <!-- Header -->
   <header class="text-white text-center py-5">
@@ -73,16 +77,16 @@
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="images (1).jfif" class="card-img-top" alt="Feature 2">
+          <div class="card" onclick="window.location.href='templates/gid.html'">
+            <img src="img/735ed4c4319b0fd13dd220fba25f667d.jpg" class="card-img-top" alt="Feature 2">
             <div class="card-body">
-              <h5 class="card-title text-center">Jonli Gidlar</h5>
+              <h5 class="card-title text-center">Gid hizmatlari</h5>
               <p class="card-text">Sayohat paytida real vaqt rejimida gidlar bilan muloqot qilish imkoniyati.</p>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card">
+          <div class="card" onclick="window.location.href='templates/xaritalar.html'">
             <img src="xarita.jpg" class="card-img-top" alt="Feature 3">
             <div class="card-body">
               <h5 class="card-title text-center">Interaktiv Xaritalar</h5>
@@ -101,7 +105,8 @@
       <div class="row">
         <div class="col-md-4 mb-4">
           <div class="testimonial-card text-center">
-            <img src="shahlo.jpg" class="rounded-circle mb-3" alt="User 1" width="100" height="100" style="object-fit: cover;">
+            <img src="shahlo.jpg" class="rounded-circle mb-3" alt="User 1" width="100" height="100"
+              style="object-fit: cover;">
             <p>"Virtual O‘zbekiston orqali sayohat qilish juda qiziqarli va qulay! Barcha hududlarni ko‘rish mumkin."
             </p>
             <p><strong>Shahlo</strong></p>
@@ -109,14 +114,16 @@
         </div>
         <div class="col-md-4 mb-4">
           <div class="testimonial-card text-center">
-            <img src="zarina.png" class="rounded-circle mb-3" alt="User 2" width="100" height="100" style="object-fit: cover;">
+            <img src="zarina.png" class="rounded-circle mb-3" alt="User 2" width="100" height="100"
+              style="object-fit: cover;">
             <p>"Jonli gidlar bilan sayohat qilish tajribasi juda ajoyib! Men o‘zimni real sayohatday his qildim."</p>
             <p><strong>Zarina</strong></p>
           </div>
         </div>
         <div class="col-md-4 mb-4">
           <div class="testimonial-card text-center">
-            <img src="1403295.jpg" class="rounded-circle mb-3" alt="User 3" width="100" height="100" style="object-fit: cover;">
+            <img src="1403295.jpg" class="rounded-circle mb-3" alt="User 3" width="100" height="100"
+              style="object-fit: cover;">
             <p>"Sayohatga chiqishdan oldin O‘zbekistonning barcha diqqatga sazovor joylarini ko‘rdim. Juda foydali!"</p>
             <p><strong>Akram</strong></p>
           </div>
@@ -134,8 +141,8 @@
           <div class="news-card">
             <img src="sayohat1.jpg" class="card-img-top" alt="News 1">
             <div class="card-body">
-              <h5 class="card-title text-center">Yangi Sayohat Joylari</h5>
-              <p class="card-text">O‘zbekistonning eng yangi sayohat joylari bilan tanishing.</p>
+              <h5 class="card-title text-center">O'zbekistonning diqqatga sazovor joylari</h5>
+              <p class="card-text">O‘zbekistonning eng tarixiy sayohat joylari bilan tanishing.</p>
               <a href="batafsil.html" class="btn btn-primary">Batafsil</a>
             </div>
           </div>
@@ -152,10 +159,10 @@
         </div>
         <div class="col-md-4 mb-4">
           <div class="news-card">
-            <img src="texnologiya.jpg" class="card-img-top" alt="News 3">
+            <img src="img/mehmonxona.jpeg" class="card-img-top" alt="News 3">
             <div class="card-body">
-              <h5 class="card-title text-center">Virtual Sayohat Texnologiyalari</h5>
-              <p class="card-text">VR texnologiyalarining sayohat tajribasiga ta’siri haqida.</p>
+              <h5 class="card-title text-center">Turistik paketlar</h5>
+              <p class="card-text">Joylashish uchun mehmonxonalar bilan tanishish va joylarni bronlash.</p>
               <a href="batafsil3.html" class="btn btn-primary">Batafsil</a>
             </div>
           </div>
@@ -166,20 +173,7 @@
 
   <!-- Footer -->
   <footer class="bg-dark text-white py-3">
-    <!-- <div class="social-icons">
-      <a href="https://www.instagram.com/" target="_blank" title="Instagram">
-          <i class="fab fa-instagram fa-2x" style="color: red;"></i>
-      </a>
-      <a href="https://twitter.com/" target="_blank" title="Twitter">
-          <i class="fab fa-twitter fa-2x" style="color: aqua;"></i>
-      </a>
-      <a href="https://t.me/" target="_blank" title="Telegram">
-          <i class="fab fa-telegram-plane fa-2x" style="color: cornflowerblue;"></i>
-      </a>
-      <a href="https://www.iqonkalar.com" target="_blank" title="Iqonkalari">
-          <i class="fab fa-apple fa-2x" style="color: white;"></i> 
-      </a>
-  </div> -->
+
     <div class="footer-icons">
       <a href="https://www.instagram.com/"><i class="fab fa-instagram fa-2x" style="color: red;"></i></a>
       <a href="https://twitter.com/"><i class="fab fa-twitter fa-2x" style="color: aqua;"></i></a>

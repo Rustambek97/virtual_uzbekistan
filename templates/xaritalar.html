@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interaktiv Xaritalar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 400px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .info-box {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container py-5">
+    <h1 class="text-center mb-4">🗺️ Interaktiv Xaritalar</h1>
+
+    <div class="row mb-3">
+      <div class="col-md-6 offset-md-3">
+        <select id="regionSelect" class="form-select">
+          <option value="">-- Hududni tanlang --</option>
+          <option value="tashkent">Toshkent</option>
+          <option value="samarkand">Samarqand</option>
+          <option value="bukhara">Buxoro</option>
+          <option value="khiva">Xiva</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="map" class="map-container"></div>
+
+    <div class="info-box mt-4" id="regionInfo">
+      <h4>Ma'lumotlar bu yerda chiqadi...</h4>
+    </div>
+  </div>
+
+  <script>
+    const regionSelect = document.getElementById('regionSelect');
+    const regionInfo = document.getElementById('regionInfo');
+    const map = document.getElementById('map');
+
+    const regions = {
+      tashkent: {
+        name: "Toshkent",
+        desc: "O‘zbekiston poytaxti bo‘lib, zamonaviy infratuzilma va qadimiy tarixni o‘zida mujassam etgan.",
+        mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23946.11677557032!2d69.216267!3d41.311081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef4b1f85f709f%3A0x42d2d6a998b91f92!2sTashkent!5e0!3m2!1sen!2s!4v1616588797262!5m2!1sen!2s"
+      },
+      samarkand: {
+        name: "Samarqand",
+        desc: "Samarqand — tarixiy Registon maydoni va Amir Temur maqbarasi bilan mashhur.",
+        mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24109.06555959478!2d66.9510!3d39.6542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4ec75470c7aafd%3A0xf08365c54c54754a!2sSamarkand!5e0!3m2!1sen!2s!4v1616588972311!5m2!1sen!2s"
+      },
+      bukhara: {
+        name: "Buxoro",
+        desc: "Buxoro — YuNESKO ro‘yxatiga kiritilgan qadimiy obidalar va tarixiy markazlar maskani.",
+        mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24150.117803078835!2d64.4239!3d39.7747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f503a81987a237d%3A0x2a8d37f7607d47d4!2sBukhara!5e0!3m2!1sen!2s!4v1616589056611!5m2!1sen!2s"
+      },
+      khiva: {
+        name: "Xiva",
+        desc: "Xiva — Ichan-Qal’a devorlari bilan mashhur, tarixiy shahar markazi hisoblanadi.",
+        mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23893.495933084416!2d60.3614!3d41.3784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dd7e545ae1fd4f%3A0xbad9188e2b088b78!2sKhiva!5e0!3m2!1sen!2s!4v1616589119847!5m2!1sen!2s"
+      }
+    };
+
+    regionSelect.addEventListener('change', () => {
+      const selected = regionSelect.value;
+      if (regions[selected]) {
+        map.innerHTML = `<iframe src="${regions[selected].mapSrc}" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`;
+        regionInfo.innerHTML = `<h4>${regions[selected].name}</h4><p>${regions[selected].desc}</p>`;
+      } else {
+        map.innerHTML = '';
+        regionInfo.innerHTML = `<h4>Ma'lumotlar bu yerda chiqadi...</h4>`;
+      }
+    });
+  </script>
+</body>
+</html>
