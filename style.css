@@ -273,9 +273,9 @@ footer {
 }
 .footer-icons{
   /* border: 1px solid white ; */
-  margin: 10px auto;
-  width: 15%;
+  /* margin: 10px auto; */
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
