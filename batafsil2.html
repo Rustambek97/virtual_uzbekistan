@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>O‘zbek Madaniyat Festivallari</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Festivallar Kalendari</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -14,7 +14,7 @@
     .hero {
       background-image: url('img/navruz2.jpg');
       background-size: cover;
-      background-position: center 10px;
+      background-position: center;
       background-repeat: no-repeat;
       background-attachment: fixed;
       height: 60vh;
@@ -57,24 +57,14 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1>O‘zbek Madaniyat Festivallari</h1>
+    <h1>Festivallar Kalendari</h1>
   </section>
 
   <!-- Festival Cards -->
   <div class="container my-5">
     <div class="row g-4">
 
-      <!-- Navro'z -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card festival-card h-100">
-          <img src="img/navruz.webp" class="card-img-top" alt="Navro'z">
-          <div class="card-body">
-            <h5 class="card-title">Navro‘z Festivali</h5>
-            <p class="card-text">Har yili 21 mart kuni o'tkaziladi. Bahor va yangi hayot ramzi bo‘lgan Navro‘z o‘zbek xalqining eng qadimiy bayramlaridan biridir.</p>
-            <button class="btn btn-outline-primary" onclick="learnMore('Navro‘z - qadimiy xalq bayrami boʻlib, yangi yil va bahorning kirib kelishini nishonlaydi. Bu kunda milliy taomlar tayyorlanadi, musobaqalar boʻlib oʻtadi.')">Batafsil</button>
-          </div>
-        </div>
-      </div>
+   
 
       <!-- Sharq Taronalari -->
       <div class="col-md-6 col-lg-4">
@@ -82,8 +72,10 @@
           <img src="img/sharq taronalari.jpg" class="card-img-top" alt="Sharq Taronalari">
           <div class="card-body">
             <h5 class="card-title">Sharq Taronalari</h5>
-            <p class="card-text">Samarqandda har ikki yilda bir marta bo‘lib o‘tadigan xalqaro musiqa festivali. Sharqona ohanglar uyg‘unligi namoyish etiladi.</p>
-            <button class="btn btn-outline-primary" onclick="learnMore('Sharq Taronalari — xalqaro musiqa festivali bo‘lib, turli mamlakatlardan san’atkorlar ishtirok etadi.')">Batafsil</button>
+            <p><strong>Sana:</strong> Har ikki yilda bir marta (avgust)</p>
+            <p><strong>Joy:</strong> Samarqand</p>
+            <p><strong>Mavzu:</strong> Xalqaro musiqa bayrami</p>
+            <button class="btn btn-outline-primary" onclick="learnMore('Sharq Taronalari — xalqaro musiqa festivali boʻlib, turli mamlakatlardan san’atkorlar ishtirok etadi.')">Batafsil</button>
           </div>
         </div>
       </div>
@@ -94,8 +86,38 @@
           <img src="img/asrlar sadosi.jpg" class="card-img-top" alt="Asrlar Sadosi">
           <div class="card-body">
             <h5 class="card-title">Asrlar Sadosi</h5>
-            <p class="card-text">Tarixiy va milliy hunarmandchilikni namoyish etuvchi festival. Ko‘chma konsertlar, ko‘rgazmalar va teatr sahnalari mavjud.</p>
-            <button class="btn btn-outline-primary" onclick="learnMore('Asrlar Sadosi – o‘zbek tarixiy san’ati va milliy hunarmandchiligi uyg‘unligidagi festivaldir.')">Batafsil</button>
+            <p><strong>Sana:</strong> Yoz oylarida (joylashuv har yili o‘zgaradi)</p>
+            <p><strong>Joy:</strong> Turli tarixiy hududlar</p>
+            <p><strong>Mavzu:</strong> Tarixiy madaniyat va hunarmandchilik</p>
+            <button class="btn btn-outline-primary" onclick="learnMore('Asrlar Sadosi — o‘zbek tarixiy san’ati, hunarmandchiligi va urf-odatlarini aks ettiruvchi sayyor festival.')">Batafsil</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Boysun Bahori -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card festival-card h-100">
+          <img src="img/sayyoh.com_.jpg" class="card-img-top" alt="Boysun Bahori">
+          <div class="card-body">
+            <h5 class="card-title">Boysun Bahori</h5>
+            <p><strong>Sana:</strong> Har yili may oyida</p>
+            <p><strong>Joy:</strong> Surxondaryo viloyati, Boysun tumani</p>
+            <p><strong>Mavzu:</strong> Folklor va milliy urf-odatlar</p>
+            <button class="btn btn-outline-primary" onclick="learnMore('Boysun Bahori — xalq og‘zaki ijodi va qadimiy marosimlarga bag‘ishlangan festival.')">Batafsil</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Qo‘qon Hunarmandchilik Festivali -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card festival-card h-100">
+          <img src="img/qo'qon.jpg" class="card-img-top" alt="Qo‘qon Hunarmandchilik Festivali">
+          <div class="card-body">
+            <h5 class="card-title">Hunarmandchilik Festivali</h5>
+            <p><strong>Sana:</strong> Har ikki yilda, sentabr oyida</p>
+            <p><strong>Joy:</strong> Farg‘ona viloyati, Qo‘qon shahri</p>
+            <p><strong>Mavzu:</strong> An’anaviy hunarmandchilik va xalqaro madaniy almashinuv</p>
+            <button class="btn btn-outline-primary" onclick="learnMore('Qo‘qon Hunarmandchilik Festivali — xalqaro hunarmandlar anjumani bo‘lib, xalq amaliy san’ati yutuqlari namoyish qilinadi.')">Batafsil</button>
           </div>
         </div>
       </div>
@@ -112,7 +134,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Yopish"></button>
         </div>
         <div class="modal-body" id="modalContent">
-          <!-- JavaScript orqali to‘ldiriladi -->
+          <!-- JS orqali to‘ldiriladi -->
         </div>
       </div>
     </div>
